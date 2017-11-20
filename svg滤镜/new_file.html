@@ -1,9 +1,32 @@
+<!--
+	<defs> 和 <filter>
+	所有互联网的SVG滤镜定义在<defs>元素中。<defs>元素定义短并含有特殊元素（如滤镜）定义。
+	<filter>标签用来定义SVG滤镜。<filter>标签使用必需的id属性来定义向图形应用哪个滤镜。
+-->
+<!--
+	<filter>元素id属性定义一个滤镜的唯一名称
+	<feGaussianBlur>元素定义模糊效果
+	in="SourceGraphic"这个部分定义了由整个图像创建效果
+	stdDeviation属性定义模糊量
+	<rect>元素的滤镜属性用来把元素链接到"f1"滤镜
+-->
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
 	</head>
+
 	<body>
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+			<defs>
+				<filter id="f1" x="0" y="0">
+					<feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+				</filter>
+			</defs>
+			<rect width="90" height="90" stroke="green" stroke-width="30" fill="yellow" filter="url(#f1)" />
+		</svg>
 	</body>
+
 </html>
