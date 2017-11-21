@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="cvs" width="400" height="400"></canvas>
+		
+		<script type="text/javascript">
+			var cvs = document.getElementById("cvs");
+			var ctx = cvs.getContext("2d");
+		
+			//大圆
+			ctx.arc(100,100,100,0,2*Math.PI);
+			ctx.stroke();
+			ctx.beginPath();
+			
+			ctx.strokeStyle = "dodgerblue";
+			//上圆
+			ctx.arc(100,50,50,0,2*Math.PI);
+			ctx.stroke();
+			ctx.beginPath();
+			//下圆
+			ctx.arc(50,100,50,0,2*Math.PI);
+			ctx.stroke();
+			ctx.beginPath();
+			//左圆
+			ctx.arc(150,100,50,0,2*Math.PI);
+			ctx.stroke();
+			ctx.beginPath();
+			//右圆
+			ctx.arc(100,150,50,0,2*Math.PI);
+			ctx.stroke();
+			ctx.beginPath();
+			//圆心圆
+			ctx.strokeStyle = "lightcoral";
+			ctx.arc(100,100,50,0,1.05);
+			ctx.stroke();
+		</script>
+	</body>
+</html>

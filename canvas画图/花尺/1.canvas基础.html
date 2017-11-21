@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="cvs" width="400" height="400"></canvas>
+		
+		<script type="text/javascript">
+			var cvs = document.getElementById("cvs");
+			var ctx = cvs.getContext("2d");
+			
+			ctx.strokeStyle = "dodgerblue";
+			ctx.fillStyle = "aquamarine";
+			
+			//画矩形
+			ctx.fillRect(0,0,200,200);
+			//画直线
+			ctx.moveTo(0,0);
+			ctx.lineTo(200,200);
+			ctx.lineTo(200,220);
+			ctx.lineTo(220,220);
+			ctx.lineTo(220,240);
+			ctx.stroke();
+			//画圆
+			ctx.beginPath();
+			ctx.arc(50,50,50,0,2*Math.PI);
+			ctx.stroke();
+		</script>
+	</body>
+</html>
